@@ -1,0 +1,12 @@
+@import "../../scss/var.scss";
+.app-button {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid $primary;
+    padding-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 10px;
+}

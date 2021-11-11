@@ -1,0 +1,66 @@
+@import '../../../../scss/index.scss';
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 40px 0;
+    position: relative;
+    .informations {
+        position: absolute;
+        top: 190px;
+        right: -180px;
+        transform: rotate(-90deg);
+        span {
+            color: $gray;
+            letter-spacing: 4px;
+            font-weight: bold;
+        }
+    }
+    .logo-column {
+        min-width: 150px;
+    }
+    .nav-column {
+        .nav {
+            list-style: none;
+            display: flex;
+            li {
+                margin: 0 16px;
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    letter-spacing: 5px;
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        flex-direction: column;
+        justify-content: center;
+        .logo-column {
+            min-width: auto !important;
+            margin-bottom: 8px;
+        }
+        .nav-column {
+            .nav {
+                flex-wrap: wrap;
+                justify-content: center;
+                li {
+                    margin: 8px;
+                    a {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

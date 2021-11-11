@@ -1,0 +1,107 @@
+@import '../../../../scss/index.scss';
+
+.services {
+    .service-1 {
+        position: relative;
+        .information1 {
+            position: absolute;
+            top: 50px;
+            right: -100px;
+            transform: rotate(-90deg);
+            span {
+                color: $gray;
+                letter-spacing: 4px;
+                font-weight: bold;
+            }
+        }
+        .content {
+            margin-right: 48px;
+            h1 {
+                &::before {
+                    content: "01";
+                }
+            }
+        }
+        > img {
+            max-width: 1000px;
+            width: 100%;
+        }
+    }
+    .service-2 {
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        .information2 {
+            position: absolute;
+            top: 50px;
+            left: -100px;
+            transform: rotate(-90deg);
+            span {
+                color: $gray;
+                letter-spacing: 4px;
+                font-weight: bold;
+            }
+        }
+        .content {
+            margin-left: 48px;
+            h1 {
+                &::before {
+                    content: "02";
+                }
+            }
+        }
+        > img {
+            max-width: 600px;
+            width: 100%;
+        }
+    }
+    .service {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 100px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        .content {
+            h1 {
+                position: relative;
+                color: $dark;
+                font-size: 40px;
+                margin: 0;
+                &::before {
+                    position: absolute;
+                    top: -115px;
+                    font-size: 150px;
+                    font-weight: bold;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                    opacity: 0.1;
+                }
+            }
+            p {
+                color: $gray;
+                line-height: 30px;
+                margin-top: 24px;
+                margin-bottom: 48px;
+            }
+        }   
+    }
+     @media screen and (max-width: 576px) {
+         padding: 0 16px;
+         .service {
+             flex-direction: column;
+             > img {
+                margin-top: 24px;
+            }
+            .content {
+                margin-left: 0;
+                margin-right: 0;
+                &:last-child {
+                    margin-top: 100px;
+                }
+            }
+         }
+     }
+}
